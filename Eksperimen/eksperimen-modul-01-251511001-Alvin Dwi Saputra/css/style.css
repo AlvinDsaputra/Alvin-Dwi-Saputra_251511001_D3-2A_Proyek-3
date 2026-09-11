@@ -1,0 +1,52 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+}
+
+nav {
+    background-color: #1a1a1a;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.spacer {
+    height: 500px;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.price-section {
+    padding: 60px 20px;
+}
+
+.price-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-top: 15px;
+}
+
+footer {
+    padding: 40px;
+    background-color: #222;
+    color: white;
+}

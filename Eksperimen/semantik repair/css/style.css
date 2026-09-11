@@ -1,0 +1,132 @@
+/* 1. Custom Properties (Design Tokens) */
+:root {
+  --primary-color: #2563eb;
+  --bg-color: #f8fafc;
+  --text-color: #1e293b;
+  --spacing-base: 1rem;
+  --radius: 8px;
+}
+
+/* 2. Global Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-base);
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: calc(var(--spacing-base) * 0.5);
+}
+
+/* Gambar Responsif */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+/* 3. Reusable Classes */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-base);
+}
+
+/* Navigasi Responsif */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-base);
+}
+
+.nav-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Layout Komponen Card & Card List (Mobile-First) */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-base);
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  padding: var(--spacing-base);
+}
+
+/* Skills List */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.skills-list li {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: calc(var(--radius) - 2px);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: calc(var(--spacing-base) * 0.5) var(--spacing-base);
+  border-radius: calc(var(--radius) - 2px);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: #1d4ed8;
+}
+
+.button:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+/* 4. Layar Lebar / Desktop (Breakpoint 768px) */
+@media (min-width: 768px) {
+  .card-list {
+    flex-direction: row;
+  }
+
+  .card {
+    flex: 1 1 0; /* Membagi 3 kartu sama rata secara horizontal */
+  }
+}
